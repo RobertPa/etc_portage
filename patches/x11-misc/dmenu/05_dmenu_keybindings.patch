@@ -1,0 +1,23 @@
+diff -Naur dmenu-4.7_original/dmenu.c dmenu-4.7/dmenu.c
+--- dmenu-4.7_original/dmenu.c	2017-11-11 15:23:12.807022715 +0100
++++ dmenu-4.7/dmenu.c	2017-11-13 08:55:18.508004890 +0100
+@@ -309,17 +309,14 @@
+ 		case XK_g: ksym = XK_Escape;    break;
+ 		case XK_h: ksym = XK_BackSpace; break;
+ 		case XK_i: ksym = XK_Tab;       break;
+-		case XK_j: /* fallthrough */
++		case XK_j: ksym = XK_Down;		break;
++		case XK_k: ksym = XK_Up;		break;
+ 		case XK_J: /* fallthrough */
+ 		case XK_m: /* fallthrough */
+ 		case XK_M: ksym = XK_Return; ev->state &= ~ControlMask; break;
+ 		case XK_n: ksym = XK_Down;      break;
+ 		case XK_p: ksym = XK_Up;        break;
+ 
+-		case XK_k: /* delete right */
+-			text[cursor] = '\0';
+-			match();
+-			break;
+ 		case XK_u: /* delete left */
+ 			insert(NULL, 0 - cursor);
+ 			break;

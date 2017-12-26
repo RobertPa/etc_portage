@@ -1,0 +1,79 @@
+app-editors/vim X -acl cscope -debug gpm lua -minimal perl python
+app-emulation/qemu opengl spice usbredir
+app-portage/layman git sync-plugin-portage gpg
+dev-libs/boost threads
+#for gparted
+dev-libs/libxml2 python
+#/gparted
+#dev-ml/lablgl glut 
+media-gfx/sxiv gif
+media-libs/imlib2 X gif jpeg png
+media-sound/mpd -network 
+media-video/ffmpeg threads network mp3 oss webp x265 x264 openssl aac xvid vpx theora -pulseaudio vaapi -celt -doc -flite -gme -iec61883 -ieee1394 -jpeg2k theora
+media-video/mpv X alsa -archive bluray -cdda cli -doc drm -dvd -jack lua opengl -samba unchardet tools
+net-misc/iputils -caps -filecaps
+www-client/w3m imlib X
+x11-wm/dwm savedconfig xinerama
+#for xdg-utils:
+app-text/xmlto text
+#/for xdg-utils
+app-admin/setools -X
+x11-terms/rxvt-unicode 256-color unicode3 xft
+#neovim:
+dev-lua/mpack luajit
+dev-lua/lpeg luajit
+app-editors/neovim -jemalloc python ruby
+#firefox
+>=media-libs/libpng-1.6.34 apng
+# required by llpp (argument)
+>=dev-ml/lablgl-1.05-r1 glut
+x11-terms/alacritty fetch-crates
+# required by dev-qt/qtcore-5.7.1-r3::gentoo
+# required by kde-frameworks/breeze-icons-5.37.0::gentoo
+# required by breeze-icons (argument)
+>=dev-libs/libpcre-8.41 pcre16
+#SELINUX
+sec-policy/selinux-base -unconfined
+
+#for suspend
+dev-libs/lzo static-libs
+dev-libs/libgpg-error static-libs
+dev-libs/libgcrypt static-libs
+#/suspend
+sys-process/audit python
+>=sys-libs/zlib-1.2.11-r1 minizip
+media-gfx/gimp smp
+x11-libs/libnotify -introspection
+# required by x11-libs/libxkbcommon-0.7.1::gentoo[X]
+# required by x11-misc/xdotool-3.20150503.1-r1::gentoo
+# required by xdotool (argument)
+>=x11-libs/libxcb-1.12-r2 xkb
+# required by dev-python/sqlalchemy-1.1.12::gentoo[python_targets_python3_4]
+# required by dev-python/sphinxcontrib-websupport-1.0.1::gentoo
+# required by dev-python/sphinx-1.6.3-r2::gentoo
+# required by net-misc/youtube-dl-99999999::gentoo
+dev-lang/python sqlite
+sys-block/gparted ntfs fat
+net-libs/gtk-vnc python
+net-misc/spice-gtk usbredir
+# required by dev-python/pyside-1.2.2-r1::gentoo[X]
+# required by pyside (argument)
+>=dev-qt/qtgui-4.8.7:4 accessibility
+# required by qbittorrent (argument)
+>=dev-qt/qtsingleapplication-2.6.1_p20150629 qt5
+>=dev-qt/qtlockedfile-2.4.1_p20150629 qt5
+#/qbittorrent
+media-gfx/blender ffmpeg player
+media-sound/pulseaudio gbdm
+# required by xdot (argument)
+>=media-libs/gd-2.2.4 fontconfig
+#/xdot
+media-libs/mesa pax_kernel
+
+# required by inkscape (argument)
+>=app-text/poppler-0.57.0-r1 cairo
+# required by libreoffice (argument)
+>=dev-libs/xmlsec-1.2.24-r1 nss
+#/libreoffice
+net-wireless/wpa_supplicant qt5
+media-tv/kodi nonfree opengl

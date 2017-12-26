@@ -1,0 +1,4 @@
+x11-terms/alacritty::slyfox
+x11-libs/gtk+::mv
+www-client/chromium::pg_overlay
+
